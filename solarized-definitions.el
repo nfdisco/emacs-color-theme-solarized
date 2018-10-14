@@ -862,7 +862,22 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (undo-tree-visualizer-unmodified-face (,@fg-cyan))
                 (undo-tree-visualizer-register-face (,@fg-yellow))
                 ;; haskell
-                (haskell-keyword-face (,@fg-cyan)))))))
+                (haskell-keyword-face (,@fg-cyan))
+                ;; ruler-mode - these faces automatically inherit the
+                ;; inverse-video attribute from the header-line face
+                (ruler-mode-default (,@fg-base01 ,@bg-base02 :inverse-video nil))
+                (ruler-mode-pad (,@fg-base0 ,@bg-base0))
+                (ruler-mode-margins (:inverse-video nil :inherit default))
+                (ruler-mode-column-number (:inherit ruler-mode-default))
+                (ruler-mode-current-column
+                 (,@fg-yellow :inherit ruler-mode-default))
+                (ruler-mode-fill-column
+                 (,@fg-orange :inherit ruler-mode-default))
+                (ruler-mode-goal-column (:inherit ruler-mode-fill-column))
+                (ruler-mode-comment-column
+                 (,@fg-green :inherit ruler-mode-default))
+                (ruler-mode-tab-stop
+                 (,@fg-blue :inherit ruler-mode-default)))))))
 
 ;;;###autoload
 (when (boundp 'custom-theme-load-path)
