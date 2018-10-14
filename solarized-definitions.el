@@ -725,6 +725,23 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 ;;font-latex
                 (font-latex-warning-face (,@fg-red))
                 (font-latex-sectioning-5-face (,@fg-violet))
+                (font-latex-bold-face (,@fmt-bold))
+                (font-latex-doctex-documentation-face (,@bg-base02))
+                (font-latex-doctex-preprocessor-face (,@fg-green ,@bg-base02))
+                (font-latex-italic-face (,@fmt-ital))
+                (font-latex-math-face (,@fg-green))
+                (font-latex-script-char-face (,@fg-orange))
+                (font-latex-sedate-face (,@fg-magenta))
+                (font-latex-slide-title-face
+                 (,@fg-blue :inherit font-latex-sectioning-5-face))
+                (font-latex-string-face (,@fg-cyan))
+                (font-latex-verbatim-face (,@fg-yellow))
+                ;; TeX
+                (TeX-error-description-error (:inherit error))
+                (TeX-error-description-tex-said (,@fg-blue))
+                (TeX-error-description-warning (,@fg-orange))
+                (TeX-fold-folded-face (,@fg-violet))
+                (TeX-fold-unfolded-face (,@bg-base02))
                 ;;flyspell
                 (flyspell-incorrect (,@fmt-curl-red)) ; SpellBad
                 (flyspell-duplicate (,@fmt-curl-yellow))
