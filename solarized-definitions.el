@@ -365,6 +365,10 @@ the \"Gen RGB\" column in solarized-definitions.el to improve them further."
                 (font-lock-other-emphasized-face (,@fmt-bldi ,@fg-violet))
                 (font-lock-regexp-grouping-backslash (,@fmt-none ,@fg-yellow))
                 ;; info
+                (info-menu-header (,@fmt-bold))
+                (info-menu-star (:inherit default))
+                (info-node (,@fmt-bold ,@fg-yellow))
+                (info-title-4 (,@fg-blue ,@fmt-bold))
                 (info-xref (:inherit link))
                 (info-xref-visited (:inherit link-visited))
                 ;; org
